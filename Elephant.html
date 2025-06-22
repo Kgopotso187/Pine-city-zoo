@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elephants</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Optional internal CSS enhancements */
+        #info-box-full {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #info-box-full img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+
+        #where-info {
+            margin-top: 20px;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 8px;
+            display: none; /* Hidden by default */
+        }
+
+        #toggle-btn {
+            margin-top: 15px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #toggle-btn:hover {
+            background-color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Zoo Logo"/>
+    </div>
+
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/elephant.jpg" alt="Elephant"/>
+                <h3>ELEPHANTS</h3>
+                <p>Elephants are large mammals of the family Elephantidae and the order Proboscidea. Two species are traditionally recognised, the African elephant (Loxodonta africana) and the Asian elephant (Elephas maximus)...</p>
+
+                <p>All elephants have several distinctive features, the most notable of which is a long trunk...</p>
+
+                <p>Elephants are herbivorous and can be found in different habitats including savannahs, forests, deserts and marshes. They prefer to stay near water.</p>
+
+                <button id="toggle-btn">Show Location</button>
+                <div id="where-info">
+                    <strong>WHERE WILL YOU FIND THEM?</strong>
+                    <p>You will find the elephants at pen E22, right next to the amphitheatre.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="WEATHER.HTML">WEATHER</a>
+        <a href="FEEDBACK.HTML">FEEDBACK</a>
+    </div>
+
+    <!-- ✅ JavaScript -->
+    <script>
+        window.onload = function () {
+            alert("🐘 Welcome to the Elephant Info Page!");
+
+            const toggleBtn = document.getElementById("toggle-btn");
+            const whereInfo = document.getElementById("where-info");
+
+            toggleBtn.addEventListener("click", function () {
+                if (whereInfo.style.display === "none") {
+                    whereInfo.style.display = "block";
+                    toggleBtn.textContent = "Hide Location";
+                } else {
+                    whereInfo.style.display = "none";
+                    toggleBtn.textContent = "Show Location";
+                }
+            });
+        };
+    </script>
+</body>
+</html>

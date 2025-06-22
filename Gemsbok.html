@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemsbok</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #info-box-full {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+
+        #info-box-full img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #where-info {
+            display: none;
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #1976d2;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        #toggle-btn {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #toggle-btn:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Zoo Logo"/>
+    </div>
+
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/gemsbok.jpg" alt="Gemsbok"/>
+                <h3>GEMSBOK</h3>
+                <p>The gemsbok or gemsbuck (Oryx gazella) is a large antelope native to Southern Africa, particularly the Kalahari Desert.</p>
+                <p>It is featured on Namibia's coat of arms, with an estimated population of 373,000.</p>
+                <p>The name "gemsbok" is derived from Afrikaans and Dutch, referring to the male chamois.</p>
+
+                <button id="toggle-btn">Show Location</button>
+
+                <div id="where-info">
+                    <strong>WHERE WILL YOU FIND THEM?</strong>
+                    <p>You will find the gemsboks just beyond panda canyon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="WEATHER.HTML">WEATHER</a>
+        <a href="FEEDBACK.HTML">FEEDBACK</a>
+    </div>
+
+    <!-- ✅ JavaScript for interactivity -->
+    <script>
+        // Show welcome message on page load
+        window.onload = function () {
+            alert("🦌 Welcome! Discover the elegant Gemsbok!");
+        };
+
+        // Toggle location info
+        const toggleBtn = document.getElementById("toggle-btn");
+        const whereInfo = document.getElementById("where-info");
+
+        toggleBtn.addEventListener("click", function () {
+            if (whereInfo.style.display === "none") {
+                whereInfo.style.display = "block";
+                toggleBtn.textContent = "Hide Location";
+            } else {
+                whereInfo.style.display = "none";
+                toggleBtn.textContent = "Show Location";
+            }
+        });
+    </script>
+</body>
+</html>

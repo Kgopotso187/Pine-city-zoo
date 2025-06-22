@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png"/>
+    </div>
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/mos-pizza.jpg"/>
+                <h3>MO'S PIZZA</h3>
+                <p>Grab a delicious, authentic Italian meal at Mo's Pizza.</p>
+                <p> They serve the most delicious thick-crust pizzas and delicious pastas.</p>
+                <strong><p>WHERE WILL YOU FIND IT?</p></strong>
+                <p>Mo's Pizza is at the main food court.</p>
+
+                <!-- Button to show message -->
+                <button id="pizzaBtn">Hungry? Click here!</button>
+            </div>
+         </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+        document.getElementById('pizzaBtn').addEventListener('click', () => {
+            alert("Enjoy your meal at Mo's Pizza! Don't forget to try their famous thick-crust pizzas.");
+        });
+    </script>
+</body>
+</html>

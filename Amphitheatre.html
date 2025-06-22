@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Amphitheatre</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png"/>
+    </div>
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/garden-amphitheater.jpg"/>
+                <h3>AMPHITHEATRE</h3>
+                <p>Learn and be entertained. Come and catch daily educational and entertaining shows, talks and demonstrations at the amphitheatre.</p>
+                <p>Today's program:</p>
+                <p>9h00am : A Bug's Life - play</p>
+                <p>11h00am : Penny and her Penguins</p>
+                <p>14h00pm : Bigs Cats of Africa - a Documentary</p>
+                <strong><p>WHERE WILL YOU FIND IT?</p></strong>
+                <p>The Amphitheatre is to the west of the main entrance.</p>
+
+                <!-- Added button -->
+                <button id="showProgramBtn">Show Today's Program</button>
+            </div>
+         </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+      // When the button is clicked, show an alert with the program info
+      document.getElementById('showProgramBtn').addEventListener('click', () => {
+        const program = `
+9h00am : A Bug's Life - play
+11h00am : Penny and her Penguins
+14h00pm : Bigs Cats of Africa - a Documentary
+        `;
+        alert("Today's Program:\n" + program);
+      });
+    </script>
+</body>
+</html>

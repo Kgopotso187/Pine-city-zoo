@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monkey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #info-box-full {
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        #info-box-full img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        #location-info {
+            display: none;
+            background-color: #e0f7fa;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 5px solid #00acc1;
+            border-radius: 4px;
+        }
+
+        #fact-box {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/monkey.jpg" alt="Monkey">
+                <h3>MONKEY</h3>
+                <p>The dusky leaf monkey, spectacled langur, or spectacled leaf monkey (Trachypithecus obscurus) is a species of primate in the family Cercopithecidae. It is found in Malaysia, Burma, and Thailand.</p>
+
+                <button id="toggle-location-btn">Show Location</button>
+                <div id="location-info">
+                    <strong>WHERE WILL YOU FIND THEM?</strong>
+                    <p>You will find the monkeys at the monkey cage near the Monkey Trail.</p>
+                </div>
+
+                <button id="show-fact-btn">Get a Fun Fact 🐵</button>
+                <div id="fact-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+        // Welcome message on load
+        window.onload = function () {
+            alert("🐵 Welcome to the Monkey Zone!");
+        };
+
+        // Toggle Location Info
+        const toggleBtn = document.getElementById("toggle-location-btn");
+        const locationInfo = document.getElementById("location-info");
+
+        toggleBtn.addEventListener("click", () => {
+            if (locationInfo.style.display === "none") {
+                locationInfo.style.display = "block";
+                toggleBtn.textContent = "Hide Location";
+            } else {
+                locationInfo.style.display = "none";
+                toggleBtn.textContent = "Show Location";
+            }
+        });
+
+        // Fun Fact Generator
+        const facts = [
+            "Monkeys can understand basic arithmetic.",
+            "Capuchin monkeys wash their hands and feet in urine to mark territory.",
+            "Some monkeys use tools like sticks to get insects or crack nuts.",
+            "A group of monkeys is called a ‘troop’ or ‘barrel’.",
+            "Monkeys communicate with facial expressions and sounds."
+        ];
+
+        const factBox = document.getElementById("fact-box");
+        const factBtn = document.getElementById("show-fact-btn");
+
+        factBtn.addEventListener("click", () => {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            factBox.textContent = randomFact;
+            factBox.style.display = "block";
+        });
+    </script>
+</body>
+</html>

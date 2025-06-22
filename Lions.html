@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #info-box-full {
+            padding: 20px;
+            background-color: #fff3e0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+
+        #info-box-full img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        #toggle-location {
+            background-color: #f57c00;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        #toggle-location:hover {
+            background-color: #ef6c00;
+        }
+
+        #location-info {
+            display: none;
+            background-color: #ffe0b2;
+            padding: 10px;
+            border-left: 5px solid #f57c00;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/lion.jpg" alt="Lion">
+                <h3>LIONS</h3>
+                <p>The lion (Panthera leo) is one of the five big cats in the genus Panthera...</p>
+                <p>Wild lions currently exist in sub-Saharan Africa and in Asia...</p>
+                <p>The lion is a vulnerable species, having seen a major population decline...</p>
+
+                <button id="toggle-location">Show Location</button>
+
+                <div id="location-info">
+                    <strong>WHERE WILL YOU FIND THEM?</strong>
+                    <p>You will find the lions at the Northern Frontier.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+        // Show welcome alert on load
+        window.onload = function () {
+            alert("🦁 Welcome to the Lions' Territory!");
+        };
+
+        // Toggle button behavior
+        const toggleBtn = document.getElementById("toggle-location");
+        const locationBox = document.getElementById("location-info");
+
+        toggleBtn.addEventListener("click", function () {
+            if (locationBox.style.display === "none") {
+                locationBox.style.display = "block";
+                toggleBtn.textContent = "Hide Location";
+            } else {
+                locationBox.style.display = "none";
+                toggleBtn.textContent = "Show Location";
+            }
+        });
+
+        // Optional: Add lion sound effect on load or button
+        // const roar = new Audio('sounds/lion-roar.mp3');
+        // roar.play(); // Uncomment this line to auto-play lion sound on load
+    </script>
+</body>
+</html>

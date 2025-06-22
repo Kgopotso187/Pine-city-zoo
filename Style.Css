@@ -1,0 +1,111 @@
+/* Reset some basics */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header/logo */
+#header {
+    background-color: #2e7d32;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#header img {
+    width: 120px;
+}
+
+/* Tabs Top & Bottom Navigation */
+#tabs-top, #tabs-bottom {
+    background-color: #388e3c;
+    padding: 12px;
+    text-align: center;
+}
+
+#tabs-top a, #tabs-bottom a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+#tabs-top a:hover, #tabs-bottom a:hover {
+    background-color: #2e7d32;
+    border-radius: 5px;
+}
+
+/* Main content container */
+#main {
+    padding: 20px;
+}
+
+/* Info boxes for animals */
+.info-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 15px auto;
+    padding: 10px 15px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #e0f2f1;
+}
+
+/* Images inside info-box */
+.info-box img {
+    vertical-align: middle;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 6px;
+}
+
+.info-box img.right {
+    float: right;
+    height: 25px;
+    margin-top: 15px;
+}
+
+/* Headings inside cards */
+.info-box h3 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+    color: #1b5e20;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive image tweaks */
+@media (max-width: 600px) {
+    .info-box {
+        padding: 10px;
+    }
+
+    .info-box h3 {
+        font-size: 18px;
+    }
+
+    .info-box p {
+        font-size: 13px;
+    }
+
+    .info-box img {
+        height: 50px;
+    }
+}

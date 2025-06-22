@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png"/>
+    </div>
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/lost-forest.jpg"/>
+                <h3>LOST FOREST</h3>
+                <p>Relax and enjoy a picnic with your family and friends in this shady picnic spot by the edge of the lake.</p>
+                <p> Picnic tables and clean bathrooms are provided.</p>
+                <strong><p>WHERE WILL YOU FIND IT?</p></strong>
+                <p>The Lost Forest to the east of the zoo, beyond Monkey Trail.</p>
+
+                <!-- Button to show message -->
+                <button id="welcomeBtn">Welcome Message</button>
+            </div>
+         </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+        document.getElementById('welcomeBtn').addEventListener('click', () => {
+            alert("Welcome to the Lost Forest! Enjoy your picnic and the peaceful nature around you.");
+        });
+    </script>
+</body>
+</html>

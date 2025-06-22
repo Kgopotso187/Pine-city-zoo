@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png"/>
+    </div>
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/panda.jpg"/>
+                <h3>THANK YOU</h3>
+                <p>Your message has been received!</p>
+                <p>We will respond shortly.</p>
+                <p id="countdown">Redirecting you back in 5 seconds...</p>
+                <button id="back-btn">Go back now</button>
+            </div>
+        </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+<script>
+    let seconds = 5;
+    const countdownEl = document.getElementById('countdown');
+    const backBtn = document.getElementById('back-btn');
+
+    const interval = setInterval(() => {
+        seconds--;
+        countdownEl.textContent = `Redirecting you back in ${seconds} second${seconds !== 1 ? 's' : ''}...`;
+        if (seconds <= 0) {
+            clearInterval(interval);
+            window.location.href = 'FEEDBACK.HTML';
+        }
+    }, 1000);
+
+    backBtn.addEventListener('click', () => {
+        window.location.href = 'FEEDBACK.HTML';
+    });
+</script>
+</body>
+</html>

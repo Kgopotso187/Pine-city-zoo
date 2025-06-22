@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gorilla Info</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #info-box-full {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        #info-box-full img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        #toggle-location {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #toggle-location:hover {
+            background-color: #388e3c;
+        }
+
+        #location-info {
+            display: none;
+            background-color: #f1f8e9;
+            padding: 10px;
+            border-left: 4px solid #4caf50;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Zoo Logo"/>
+    </div>
+
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/gorilla.jpg" alt="Gorilla">
+                <h3>GORILLA</h3>
+                <p>Gorillas are ground-dwelling, predominantly herbivorous apes that inhabit the forests of central Africa...</p>
+                <p>They are the largest living primates and share 95–99% of their DNA with humans...</p>
+                
+                <button id="toggle-location">Show Location</button>
+                <div id="location-info">
+                    <strong>WHERE WILL YOU FIND THEM?</strong>
+                    <p>You will find the gorilla cage at GO12.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <!-- ✅ JavaScript Section -->
+    <script>
+        // Welcome alert on page load
+        window.onload = function () {
+            alert("🦍 Welcome to the Gorilla Zone!");
+        };
+
+        // Toggle gorilla location info
+        const toggleBtn = document.getElementById("toggle-location");
+        const locationBox = document.getElementById("location-info");
+
+        toggleBtn.addEventListener("click", function () {
+            if (locationBox.style.display === "none") {
+                locationBox.style.display = "block";
+                toggleBtn.textContent = "Hide Location";
+            } else {
+                locationBox.style.display = "none";
+                toggleBtn.textContent = "Show Location";
+            }
+        });
+    </script>
+</body>
+</html>

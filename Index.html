@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoo Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png" alt="Zoo Logo"/>
+    </div>
+
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="#" id="mapTab">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+
+    <div id="main-home">
+        <img id="mapImage" src="images/map.png" width="200" alt="Zoo Map"/>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+        // Welcome popup
+        window.onload = function () {
+            alert("🦁 Welcome to the Zoo Explorer!");
+            highlightCurrentTab();
+            showRandomFact();
+        };
+
+        // Change map on click
+        const mapImage = document.getElementById("mapImage");
+        let isZoomed = false;
+
+        mapImage.onclick = function () {
+            if (isZoomed) {
+                mapImage.src = "images/map.png";
+                mapImage.width = 200;
+            } else {
+                mapImage.src = "images/map_zoomed.png"; // Use a zoomed-in version
+                mapImage.width = 300;
+            }
+            isZoomed = !isZoomed;
+        };
+
+        // Highlight current tab
+        function highlightCurrentTab() {
+            const mapTab = document.getElementById("mapTab");
+            mapTab.classList.add("active");
+        }
+
+        // Fun fact popup
+        function showRandomFact() {
+            const facts = [
+                "Did you know? A group of flamingos is called a 'flamboyance'!",
+                "Elephants can recognize themselves in mirrors.",
+                "A giraffe's neck has the same number of vertebrae as a human's — seven!",
+                "Koalas sleep up to 20 hours a day."
+            ];
+            const fact = facts[Math.floor(Math.random() * facts.length)];
+            setTimeout(() => {
+                alert("🦓 Fun Fact: " + fact);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

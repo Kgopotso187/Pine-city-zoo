@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png"/>
+    </div>
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/insect-house-tn.png"/>
+                <h3>INSECT HOUSE</h3>
+                <p>The Insect House is home to one of the largest and most diverse insect collections in the world. Here you will see creepy crawlies from all over the world, in every shape and size.</p>
+
+                <strong><p>WHERE WILL YOU FIND IT?</p></strong>
+                <p>Insect House is at the eastern side of the zoo, next to the Monkey Trail.</p>
+
+                <!-- Button to show fun fact -->
+                <button id="funFactBtn">Show a Fun Insect Fact!</button>
+            </div>
+         </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+    <script>
+        document.getElementById('funFactBtn').addEventListener('click', () => {
+            alert("Did you know? Ants can carry objects 50 times their own body weight!");
+        });
+    </script>
+</body>
+</html>

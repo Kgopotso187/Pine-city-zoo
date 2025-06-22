@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo.png"/>
+    </div>
+    <div id="tabs-top">
+        <a href="Animals.html">ANIMALS</a>
+        <a href="Index.html">MAP</a>
+        <a href="Places.html">PLACES</a>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <img src="images/monkey-trail.jpg"/>
+                <h3>MONKEY TRAIL</h3>
+                <p>Whether you choose to walk or ride, you will find the monkey trail very challenging. Take the 30 minute or 1 hour trail.</p>
+                <p>Be prepared to get dirty</p>
+                <strong><p id="location-header">WHERE WILL YOU FIND IT?</p></strong>
+                <p id="location-info">Monkey Trail is at the eastern side of the zoo.</p>
+                <button id="toggle-location-btn">Toggle Location Info</button>
+            </div>
+        </div>
+    </div>
+    <div id="tabs-bottom">
+        <a href="Weather.html">WEATHER</a>
+        <a href="FeedBack.html">FEEDBACK</a>
+    </div>
+
+<script>
+    // Show welcome alert on page load
+    window.addEventListener('load', () => {
+        alert("Welcome to the Monkey Trail page! Get ready for an adventure.");
+    });
+
+    // Toggle location info visibility
+    const toggleBtn = document.getElementById('toggle-location-btn');
+    const locationInfo = document.getElementById('location-info');
+    
+    toggleBtn.addEventListener('click', () => {
+        if (locationInfo.style.display === 'none') {
+            locationInfo.style.display = 'block';
+        } else {
+            locationInfo.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
